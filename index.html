@@ -221,3 +221,65 @@
   <script src="script.js"></script>
 </body>
 </html>
+</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What do you bake?</h3>
+          <p>I can bake anything by request. Some of my specialties are Banana Bread, Tres Leches, Carrot Cake, Cinnamon Rolls, and Cookies.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Where are you located?</h3>
+          <p>I'm located in Hialeah, FL. I do not have a physical store, but I offer delivery and pickup for your convenience. There is a delivery fee depending on distance.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you require deposits?</h3>
+          <p>Deposits are required in order to place an order. It is $20 to secure your baked goods, and it goes towards the total payment. Deposits are non-refundable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section content-section">
+      <div class="section-heading">
+        <h2>Order Desserts</h2>
+        <p>Pick up your sweet order or choose local delivery. When you submit, an email draft opens so you can send your order directly.</p>
+      </div>
+      <div class="order-form-wrapper">
+        <form id="order-form" class="order-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="item">Choose an item</label>
+          <select id="item" name="item" required>
+            <option value="cookies">Cookie Box</option>
+            <option value="cakePops">Cake Pops</option>
+            <option value="cakesicles">Cakesicles</option>
+            <option value="cinnamonRolls">Cinnamon Rolls</option>
+            <option value="chocolateStrawberries">Chocolate Covered Strawberries</option>
+            <option value="carrotCake">Carrot Cake</option>
+            <option value="tresLeches">Tres Leches</option>
+            <option value="bananaBread">Banana Bread</option>
+            <option value="dotCakes">Dot Cakes</option>
+            <option value="partySmall">Party Package - Small</option>
+            <option value="partyMedium">Party Package - Medium</option>
+            <option value="partyLarge">Party Package - Large</option>
+            <option value="partyXLarge">Party Package - X-Large</option>
+          </select>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Any special requests?" rows="4"></textarea>
+
+          <button type="submit">Send Order</button>
+        </form>
+        <div id="order-result" class="order-result" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
