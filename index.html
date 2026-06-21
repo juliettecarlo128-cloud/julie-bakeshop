@@ -20,8 +20,10 @@
   <nav class="top-tabs" aria-label="Quick navigation">
     <div class="tabs-left">
       <a class="tab active" href="#menu">Menu</a>
+      <a class="tab" href="#cupcakes">Cupcakes</a>
       <a class="tab" href="#party-gallery">Party Preview</a>
       <a class="tab" href="#packages">Packages</a>
+       <a class="tab" href="#faq">FAQs</a>
       <a class="tab" href="#order">Order</a>
     </div>
     <div class="tabs-right">
@@ -103,6 +105,44 @@
           <p>Moist banana bread with walnuts and a hint of cinnamon.</p>
         </div>
       </div>
+      <div class="card">
+        <img src="dot-cake-1.jpg" alt="Dot Cakes" />
+        <div class="card-body">
+          <h3>Dot Cakes</h3>
+          <p>Assorted dot cake designs for parties and custom celebrations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cupcakes" class="section card-grid">
+      <div class="section-heading">
+        <h2>Cupcakes</h2>
+        <p>Freshly baked cupcakes with frosting, sprinkles, and custom flavors.</p>
+      </div>
+      <div class="card">
+        <img src="cupcake-1.jpg" alt="Vanilla cupcake" />
+        <div class="card-body">
+          <h3>Vanilla Cupcake</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="cupcake-5.jpg" alt="Vanilla cupcake" />
+        <div class="card-body">
+          <h3>Vanilla Cupcake</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="cupcake-3.jpg" alt="Chocolate cupcake" />
+        <div class="card-body">
+          <h3>Chocolate Cupcake</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="cupcake-2.jpg" alt="Chocolate cupcake" />
+        <div class="card-body">
+          <h3>Chocolate Cupcake</h3>
+        </div>
+      </div>
     </section>
 
     <section id="party-gallery" class="section">
@@ -164,64 +204,25 @@
         </div>
         <div class="package-card">
           <h3>X-Large Package</h3>
-          <p class="package-price">$320</p>
+          <p class="package-price">$360</p>
           <ul>
             <li>2 dozen Cake pops</li>
             <li>2 dozen Rice Krispies</li>
             <li>2 dozen Oreos</li>
             <li>2 dozen Pretzels</li>
-            <li>1 dozen Marshmallows</li>
-            <li>1 dozen Wafers</li>
+            <li>2 dozen Marshmallows</li>
+            <li>2 dozen Wafers</li>
+            <li>1 dozen Strawberries</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="order" class="section content-section">
+    <section id="faq" class="section">
       <div class="section-heading">
-        <h2>Order Desserts</h2>
-        <p>Pick up your sweet order or choose local delivery. When you submit, an email draft opens so you can send your order directly.</p>
+        <h2>FAQs</h2>
+        <p>Quick answers to common questions about ordering, location, and deposits.</p>
       </div>
-      <div class="order-form-wrapper">
-        <form id="order-form" class="order-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-
-          <label for="item">Choose an item</label>
-          <select id="item" name="item" required>
-            <option value="cookies">Cookie Box</option>
-            <option value="cakePops">Cake Pops</option>
-            <option value="cakesicles">Cakesicles</option>
-            <option value="cinnamonRolls">Cinnamon Rolls</option>
-            <option value="chocolateStrawberries">Chocolate Covered Strawberries</option>
-            <option value="carrotCake">Carrot Cake</option>
-            <option value="tresLeches">Tres Leches</option>
-            <option value="bananaBread">Banana Bread</option>
-            <option value="partySmall">Party Package - Small</option>
-            <option value="partyMedium">Party Package - Medium</option>
-            <option value="partyLarge">Party Package - Large</option>
-            <option value="partyXLarge">Party Package - X-Large</option>
-          </select>
-
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" placeholder="Any special requests?" rows="4"></textarea>
-
-          <button type="submit">Send Order</button>
-        </form>
-        <div id="order-result" class="order-result" aria-live="polite"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"></footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-</div>
       <div class="faq-list">
         <div class="faq-item">
           <h3>What do you bake?</h3>
@@ -246,10 +247,19 @@
       <div class="order-form-wrapper">
         <form id="order-form" class="order-form">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
 
           <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required />
+
+          <fieldset class="order-choice">  <!-- come back here to fix the delivery method format-->
+            <legend>Pickup or delivery</legend>
+            <label><input type="radio" name="orderType" value="Pickup" checked /> Pickup</label>
+            <label><input type="radio" name="orderType" value="Delivery" /> Delivery</label>
+          </fieldset>
 
           <label for="item">Choose an item</label>
           <select id="item" name="item" required>
@@ -261,7 +271,6 @@
             <option value="carrotCake">Carrot Cake</option>
             <option value="tresLeches">Tres Leches</option>
             <option value="bananaBread">Banana Bread</option>
-            <option value="dotCakes">Dot Cakes</option>
             <option value="partySmall">Party Package - Small</option>
             <option value="partyMedium">Party Package - Medium</option>
             <option value="partyLarge">Party Package - Large</option>
@@ -274,16 +283,7 @@
           <button type="submit">Send Order</button>
         </form>
         <div id="order-result" class="order-result" aria-live="polite"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"></footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<div class="order-actions" aria-hidden="true">
+        <div class="order-actions" aria-hidden="true">
           <button id="copy-email" type="button">Copy order email</button>
         </div>
       </div>
