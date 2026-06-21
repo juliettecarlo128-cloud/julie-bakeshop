@@ -280,8 +280,25 @@ p {
   box-shadow: 0 24px 50px rgba(210, 150, 180, 0.12);
 }
 
-label {
+label,
+.order-choice legend {
   font-weight: 600;
+}
+
+.order-choice {
+  border: 1px solid rgba(217, 150, 182, 0.35);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #fff8f3;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.order-choice label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 input,
@@ -314,6 +331,31 @@ button[type="submit"]:hover {
   background: #fff9f6;
   border: 1px solid rgba(255, 210, 190, 0.8);
   min-height: 5rem;
+}
+
+.order-actions {
+  display: none;
+  margin-top: 1rem;
+}
+
+.order-actions.visible {
+  display: block;
+}
+
+#copy-email {
+  display: inline-flex;
+  padding: 0.9rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: #f6c0d8;
+  color: #5f3d4f;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#copy-email:hover {
+  background: #e7a8c1;
 }
 
 .footer {
